@@ -33,6 +33,9 @@
                                 <state key="normal" title="Start">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="StartButtomPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="sGx-VO-7PJ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -46,7 +49,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="HellowLabel" destination="dF7-5C-WbY" id="dsn-MR-kRU"/>
+                        <outlet property="hellowWorldLabel" destination="dF7-5C-WbY" id="Vjm-1c-6Te"/>
+                        <outlet property="textBattonLabel" destination="PJX-NB-rBr" id="wHh-KH-Udz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

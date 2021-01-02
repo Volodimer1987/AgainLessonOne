@@ -7,14 +7,42 @@
 
 import UIKit
 
+enum ShowTextLabelCondition {
+    case showed
+    case hidden
+}
+
 class ViewController: UIViewController {
-    @IBOutlet var HellowLabel: UILabel!
+    
+    @IBOutlet var hellowWorldLabel: UILabel!
+    @IBOutlet var textBattonLabel: UIButton!
+    
+    private var textButtonCondition:ShowTextLabelCondition = .hidden
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        hellowWorldLabel.isHidden = true
+
     }
 
+    @IBAction func StartButtomPressed() {
+        
+        switch textButtonCondition {
+        
+        case .hidden:
+            textButtonCondition = .showed
+            hellowWorldLabel.isHidden = false
+            textBattonLabel.setTitle("Hidden text", for: .normal)
+            
+        case .showed:
+            textButtonCondition = .hidden
+            hellowWorldLabel.isHidden = true
+            textBattonLabel.setTitle("Show text", for: .normal)
 
+        }
+        
+        
+    }
+    
 }
 
