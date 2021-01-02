@@ -21,25 +21,36 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         hellowWorldLabel.isHidden = true
+        textBattonLabel.layer.cornerRadius = 10
 
     }
 
     @IBAction func StartButtomPressed() {
+//
+//        switch textButtonCondition {
+//
+//        case .hidden:
+//            textButtonCondition = .showed
+//            hellowWorldLabel.isHidden = false
+//            textBattonLabel.setTitle("Hidden text", for: .normal)
+//
+//        case .showed:
+//            textButtonCondition = .hidden
+//            hellowWorldLabel.isHidden = true
+//            textBattonLabel.setTitle("Show text", for: .normal)
+//
+//        }
         
-        switch textButtonCondition {
-        
-        case .hidden:
-            textButtonCondition = .showed
+        if hellowWorldLabel.isHidden {
             hellowWorldLabel.isHidden = false
-            textBattonLabel.setTitle("Hidden text", for: .normal)
-            
-        case .showed:
-            textButtonCondition = .hidden
+            textBattonLabel.setTitle("Hide Text", for: .normal)
+        } else {
             hellowWorldLabel.isHidden = true
             textBattonLabel.setTitle("Show text", for: .normal)
-
         }
+        
         
         
     }
