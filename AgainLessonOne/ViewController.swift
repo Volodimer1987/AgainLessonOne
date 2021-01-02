@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-    var s = ""
+    @IBOutlet var HellowLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
